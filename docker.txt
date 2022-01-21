@@ -1,0 +1,518 @@
+
+# syntax=docker/dockerfile
+FROM node:12-alpine
+RUN apk add --no-cache python2 g++ make
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node","src/index.js"]
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\Mounika\Downloads\getting-started-master (1)> cd getting-started-master
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master> cd app
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker build -t getting-started .
+[+] Building 54.0s (16/16) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                     2.9s 
+ => => transferring dockerfile: 32B                                                                                                                      0.8s 
+ => => transferring context: 2B                                                                                                                          0.3s 
+ => [auth] docker/dockerfile:pull token for registry-1.docker.io                                                                                         0.0s 
+ => CACHED docker-image://docker.io/docker/dockerfile@sha256:42399d4635eddd7a9b8a24be879d2f9a930d0ed040a61324cfdf59ef1357b3b2                            0.0s 
+ => [internal] load build definition from Dockerfile                                                                                                     0.0s 
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                              0.0s 
+ => [internal] load build context                                                                                                                       18.9s 
+ => CACHED [3/5] WORKDIR /app                                                                                                                            0.0s 
+ => CACHED [4/5] COPY . .                                                                                                                                0.0s 
+ => CACHED [5/5] RUN yarn install --production                                                                                                           0.0s 
+ => exporting to image                                                                                                                                   1.0s 
+ => => exporting layers                                                                                                                                  0.0s 
+ => => writing image sha256:a121143bb63879536cb32052cf1c75cb02c15f7955623ad4a1131e9acb79155b                                                             0.1s 
+ => => naming to docker.io/library/getting-started                                                                                                       0.1s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 getting-started
+f7871640e53b0f471a8793426e31a8c41c0b528d782ae05ba11e91efb53bd737
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+Using default tag: latest
+The push refers to repository [docker.io/mounika1213/getting-started]
+e66f48890ec5: Layer already exists
+c63ebabbd58f: Layer already exists
+1f412f8f8368: Layer already exists
+8f4a9ef8f617: Layer already exists
+4eb06231aba4: Layer already exists
+62549ded9a31: Layer already exists
+8d3ac3489996: Layer already exists
+latest: digest: sha256:8aa92fd3888752e8072d8412274ef4f7b7b2413f5d2eb96da5067f5af295de2f size: 2001
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
+
+
+
+
+
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+Digest: sha256:b5a61709a9a44284d88fb12e5c48db0409cfad5b69d4ff8224077c57302df9cf
+Status: Downloaded newer image for ubuntu:latest
+818bc0d49457dec87cdba83313684c43d7178f2569b15eb68e479e42028173a6
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                    NAMES
+818bc0d49457   ubuntu            "bash -c 'shuf -i 1-…"   19 seconds ago   Up 11 seconds                            unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker exec -it 818bc0d49457 cat /data.txt
+3122
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -it ubuntu  ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                    NAMES
+818bc0d49457   ubuntu            "bash -c 'shuf -i 1-…"   3 minutes ago   Up 3 minutes                            unruffled_lumiere
+cdf8a4cd67d8   getting-started   "docker-entrypoint.s…"   7 minutes ago   Up 7 minutes   0.0.0.0:3000->3000/tcp   confident_goodall
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker rm -f cdf8a4cd67d8
+cdf8a4cd67d8
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+818bc0d49457   ubuntu    "bash -c 'shuf -i 1-…"   4 minutes ago   Up 4 minutes             unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker  volume create todo-db 
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 -v todo-db:/etc/todos  getting-started
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> node:12-alpine `
+>> sh-c "yarn install && yarn run dev"
+Unable to find image 'node:12-alpine' locally
+12-alpine: Pulling from library/node
+56ea1bcfc516: Already exists
+55284a5c72ce: Already exists
+a9867c49b9eb: Already exists
+Digest: sha256:c3e7817c8fd124f1597cd66124d247db8e138e8ef311ba085b7104d900129d0b
+Status: Downloaded newer image for node:12-alpine
+ddb892642ae9e1e4e13e2bba29603d8dce6ea092e403d3ec6c70dc50b8394c1a
+docker: Error response from daemon: driver failed programming external connectivity on endpoint confident_noether (4622127bf3d05c4c9799ece2d9c5db8a1d2856a6643PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                    NAMES
+89dbbb19d1f4   getting-started   "docker-entrypoint.s…"   3 minutes ago   Up 3 minutes   0.0.0.0:3000->3000/tcp   sleepy_keller
+818bc0d49457   ubuntu            "bash -c 'shuf -i 1-…"   9 minutes ago   Up 9 minutes                            unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker logs -f  mounika1213
+Error: No such container: mounika1213
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker network create todo-app
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -d `
+>> --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql `
+>> -e MYSQL ROOT PASSWORD=secret `
+>> -e MYSQL DATABASE=todos `
+>> mysql:5.7
+docker: invalid reference format: repository name must be lowercase.
+See 'docker run --help'.
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -d `
+>> --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_ DATABASE=todos `
+>> mysql:5.7
+docker: invalid reference format: repository name must be lowercase.
+See 'docker run --help'.
+>> --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos `
+Unable to find image 'mysql:5.7' locally
+5.7: Pulling from library/mysql
+72a69066d2fe: Pull complete
+93619dbc5b36: Pull complete
+99da31dd6142: Pull complete
+e5c707858ec0: Pull complete
+fc41578cbf60: Pull complete
+4785d896ef10: Pull complete
+7d250cdc93be: Pull complete
+2efe6ef3579a: Pull complete
+40dc4a5ca43a: Pull complete
+cd6f90222f59: Pull complete
+031e631e9021: Pull complete
+Digest: sha256:66480693e01295d85954bb5dbe2f41f29ebceb57d3d8098ea0c9d201473f2d8b
+Status: Downloaded newer image for mysql:5.7
+e1bb46a292f119848bbcdf3853efda66393939cfdfba304181d4f9abed660f76
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS              PORTS                    NAMES
+e1bb46a292f1   mysql:5.7         "docker-entrypoint.s…"   2 minutes ago   Up About a minute   3306/tcp, 33060/tcp      nostalgic_chaum
+89dbbb19d1f4   getting-started   "docker-entrypoint.s…"   11 hours ago    Up 11 hours         0.0.0.0:3000->3000/tcp   sleepy_keller
+818bc0d49457   ubuntu            "bash -c 'shuf -i 1-…"   11 hours ago    Up 11 hours                                  unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker exec -it e1bb46a292f1 mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.37 MySQL Community Server (GPL)
+
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> exit
+Bye
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -it --network todo-app nicolaka/netshoot
+Unable to find image 'nicolaka/netshoot:latest' locally
+latest: Pulling from nicolaka/netshoot
+97518928ae5f: Pull complete
+09706d35e05d: Pull complete
+4996ecc64030: Pull complete
+9a11de879aaa: Pull complete
+44f8e61e69d1: Pull complete
+dcf41a6beeb6: Pull complete
+d4d3a508f57b: Pull complete
+ca86b0e825d1: Pull complete
+7eeba344c2b1: Pull complete
+c52dc2d61c4a: Pull complete
+d04aa1a002c2: Pull complete
+7070cabd1e04: Pull complete
+Digest: sha256:d6942ec583d8e2818f5a5d7a71c303e861a70a11396ad9e9d25b355842e97589
+Status: Downloaded newer image for nicolaka/netshoot:latest
+                    dP            dP                           dP   
+                    88            88                           88
+88d888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. .d8888b. d8888P
+88'  `88 88ooood8   88   Y8ooooo. 88'  `88 88'  `88 88'  `88   88
+88    88 88.  ...   88         88 88    88 88.  .88 88.  .88   88
+dP    dP `88888P'   dP   `88888P' dP    dP `88888P' `88888P'   dP
+
+Welcome to Netshoot! (github.com/nicolaka/netshoot)
+
+
+
+ c97407836bcf  ~  dig mysql
+
+; <<>> DiG 9.16.22 <<>> mysql
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48932
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+
+;; ANSWER SECTION:
+mysql.                  600     IN      A       172.18.0.2
+;; Query time: 260 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11)
+;; WHEN: Fri Jan 21 04:30:25 UTC 2022
+;; MSG SIZE  rcvd: 44
+
+ c97407836bcf  ~  exit
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> --network todo-app `
+>> -e MYSQL_HOST=mysql `
+>> -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret `
+>> -e MYSQL_DB=todos `
+>> node:12-alpine `
+>> sh-c "yarn install && yarn run dev"
+ad6f20366941a9b8e306b21a5ed917b3a389e744a99dc5f5a057804dc6a761fd
+docker: Error response from daemon: driver failed programming external connectivity on endpoint nifty_clarke (b279a2c8ee338f5b5c9a95d2be49525543b63ab461fe357e4007ecfacd09d3fe): Bind for 0.0.0.0:3000 failed: port is already allocated.
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                    NAMES
+e1bb46a292f1   mysql:5.7         "docker-entrypoint.s…"   29 minutes ago   Up 29 minutes   3306/tcp, 33060/tcp      nostalgic_chaum
+89dbbb19d1f4   getting-started   "docker-entrypoint.s…"   11 hours ago     Up 11 hours     0.0.0.0:3000->3000/tcp   sleepy_keller
+818bc0d49457   ubuntu            "bash -c 'shuf -i 1-…"   11 hours ago     Up 11 hours                              unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker logs e1bb46a292f1
+2022-01-21 04:07:49+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.37-1debian10 started.
+2022-01-21 04:07:50+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2022-01-21 04:07:50+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.37-1debian10 started.
+2022-01-21 04:07:50+00:00 [Note] [Entrypoint]: Initializing database files
+2022-01-21T04:07:50.680125Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2022-01-21T04:08:06.604603Z 0 [Warning] InnoDB: New log files created, LSN=45790
+2022-01-21T04:08:13.878053Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.
+2022-01-21T04:08:14.468168Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: c14d7a55-7a6f-11ec-b927-0242ac120002.
+2022-01-21T04:08:14.579964Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2022-01-21T04:08:15.164332Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:08:15.164385Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:08:15.164995Z 0 [Warning] CA certificate ca.pem is self signed.
+2022-01-21T04:08:15.534611Z 1 [Warning] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.    
+2022-01-21 04:09:56+00:00 [Note] [Entrypoint]: Database files initialized
+2022-01-21 04:09:56+00:00 [Note] [Entrypoint]: Starting temporary server
+2022-01-21 04:09:56+00:00 [Note] [Entrypoint]: Waiting for server startup
+2022-01-21T04:10:08.427107Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2022-01-21T04:10:08.871155Z 0 [Note] mysqld (mysqld 5.7.37) starting as process 77 ...
+2022-01-21T04:10:10.018869Z 0 [Note] InnoDB: PUNCH HOLE support available
+2022-01-21T04:10:10.018913Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2022-01-21T04:10:10.018919Z 0 [Note] InnoDB: Uses event mutexes
+2022-01-21T04:10:10.018922Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2022-01-21T04:10:10.018926Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-01-21T04:10:10.018929Z 0 [Note] InnoDB: Using Linux native AIO
+2022-01-21T04:10:10.332965Z 0 [Note] InnoDB: Number of pools: 1
+2022-01-21T04:10:10.518749Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2022-01-21T04:10:10.995774Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2022-01-21T04:10:12.392994Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-01-21T04:10:12.439421Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2022-01-21T04:10:12.838541Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-01-21T04:10:13.063404Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-01-21T04:10:13.092877Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-01-21T04:10:15.210418Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-01-21T04:10:15.211060Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2022-01-21T04:10:15.211100Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2022-01-21T04:10:15.213559Z 0 [Note] InnoDB: 5.7.37 started; log sequence number 2754793
+2022-01-21T04:10:15.214969Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-01-21T04:10:15.215769Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2022-01-21T04:10:16.604921Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220121  4:10:16
+2022-01-21T04:10:16.806902Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2022-01-21T04:10:16.806975Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2022-01-21T04:10:16.806984Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:10:16.806987Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:10:16.807610Z 0 [Warning] CA certificate ca.pem is self signed.
+2022-01-21T04:10:16.807670Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2022-01-21T04:10:16.990522Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider 
+choosing a different directory.
+2022-01-21T04:10:17.013741Z 0 [Note] Event Scheduler: Loaded 0 events
+2022-01-21T04:10:17.014174Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.37'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server (GPL)
+2022-01-21 04:10:17+00:00 [Note] [Entrypoint]: Temporary server started.
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+2022-01-21T04:11:02.316567Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 19356ms. The settings might not be optimal. (flushed=200 and evicted=0, during the time.)
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+2022-01-21 04:11:06+00:00 [Note] [Entrypoint]: Creating database todos
+
+2022-01-21 04:11:06+00:00 [Note] [Entrypoint]: Stopping temporary server
+2022-01-21T04:11:06.200982Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2022-01-21T04:11:06.201035Z 0 [Note] Shutting down slave threads
+2022-01-21T04:11:06.201044Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2022-01-21T04:11:06.201053Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2022-01-21T04:11:06.201129Z 0 [Note] Binlog end
+2022-01-21T04:11:06.201765Z 0 [Note] Shutting down plugin 'ngram'
+2022-01-21T04:11:06.201797Z 0 [Note] Shutting down plugin 'partition'
+2022-01-21T04:11:06.201802Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2022-01-21T04:11:06.201805Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2022-01-21T04:11:06.201807Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2022-01-21T04:11:06.201845Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2022-01-21T04:11:06.201852Z 0 [Note] Shutting down plugin 'MyISAM'
+2022-01-21T04:11:06.201864Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2022-01-21T04:11:06.201871Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2022-01-21T04:11:06.201874Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2022-01-21T04:11:06.201876Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2022-01-21T04:11:06.201878Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2022-01-21T04:11:06.201880Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2022-01-21T04:11:06.201882Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2022-01-21T04:11:06.201884Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2022-01-21T04:11:06.201886Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2022-01-21T04:11:06.201888Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2022-01-21T04:11:06.201890Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2022-01-21T04:11:06.201892Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2022-01-21T04:11:06.201894Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2022-01-21T04:11:06.201896Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2022-01-21T04:11:06.201914Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2022-01-21T04:11:06.201921Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2022-01-21T04:11:06.201923Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2022-01-21T04:11:06.201926Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2022-01-21T04:11:06.201928Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2022-01-21T04:11:06.201930Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2022-01-21T04:11:06.201932Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2022-01-21T04:11:06.201934Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2022-01-21T04:11:06.201937Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2022-01-21T04:11:06.201939Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2022-01-21T04:11:06.201973Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2022-01-21T04:11:06.201976Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2022-01-21T04:11:06.201979Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2022-01-21T04:11:06.201981Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2022-01-21T04:11:06.201983Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2022-01-21T04:11:06.201985Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2022-01-21T04:11:06.201987Z 0 [Note] Shutting down plugin 'InnoDB'
+2022-01-21T04:11:06.202117Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2022-01-21T04:11:06.215540Z 0 [Note] InnoDB: Starting shutdown...
+2022-01-21T04:11:06.315975Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2022-01-21T04:11:06.316423Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 220121  4:11:06
+2022-01-21T04:11:10.046408Z 0 [Note] InnoDB: Shutdown completed; log sequence number 12665972
+2022-01-21T04:11:10.048553Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2022-01-21T04:11:10.048656Z 0 [Note] Shutting down plugin 'MEMORY'
+2022-01-21T04:11:10.048663Z 0 [Note] Shutting down plugin 'CSV'
+2022-01-21T04:11:10.048672Z 0 [Note] Shutting down plugin 'sha256_password'
+2022-01-21T04:11:10.048675Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2022-01-21T04:11:10.048875Z 0 [Note] Shutting down plugin 'binlog'
+2022-01-21T04:11:10.049601Z 0 [Note] mysqld: Shutdown complete
+
+2022-01-21 04:11:10+00:00 [Note] [Entrypoint]: Temporary server stopped
+
+2022-01-21 04:11:10+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+
+2022-01-21T04:11:11.730542Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2022-01-21T04:11:11.732437Z 0 [Note] mysqld (mysqld 5.7.37) starting as process 1 ...
+2022-01-21T04:11:11.735755Z 0 [Note] InnoDB: PUNCH HOLE support available
+2022-01-21T04:11:11.735831Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2022-01-21T04:11:11.735836Z 0 [Note] InnoDB: Uses event mutexes
+2022-01-21T04:11:11.735838Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2022-01-21T04:11:11.735840Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-01-21T04:11:11.735842Z 0 [Note] InnoDB: Using Linux native AIO
+2022-01-21T04:11:11.736645Z 0 [Note] InnoDB: Number of pools: 1
+2022-01-21T04:11:11.736987Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2022-01-21T04:11:11.762174Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2022-01-21T04:11:11.770767Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-01-21T04:11:11.792254Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2022-01-21T04:11:11.841122Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-01-21T04:11:12.072494Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-01-21T04:11:12.072712Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-01-21T04:11:12.529001Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-01-21T04:11:12.529699Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2022-01-21T04:11:12.531382Z 0 [Note] InnoDB: 5.7.37 started; log sequence number 12665972
+2022-01-21T04:11:12.531644Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-01-21T04:11:12.532016Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2022-01-21T04:11:12.538764Z 0 [Note] InnoDB: Buffer pool(s) load completed at 220121  4:11:12
+2022-01-21T04:11:12.540756Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2022-01-21T04:11:12.540807Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2022-01-21T04:11:12.540815Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:11:12.540817Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2022-01-21T04:11:12.541466Z 0 [Warning] CA certificate ca.pem is self signed.
+2022-01-21T04:11:12.541529Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2022-01-21T04:11:12.542193Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-01-21T04:11:12.542938Z 0 [Note] IPv6 is available.
+2022-01-21T04:11:12.542979Z 0 [Note]   - '::' resolves to '::';
+2022-01-21T04:11:12.543001Z 0 [Note] Server socket created on IP: '::'.
+2022-01-21T04:11:12.661603Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider 
+choosing a different directory.
+2022-01-21T04:11:12.668865Z 0 [Note] Event Scheduler: Loaded 0 events
+2022-01-21T04:11:12.669341Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.37'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker exec -it e1bb46a292f1 mysql -p todos
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.37 MySQL Community Server (GPL)
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select * from todo_items;
+ERROR 1146 (42S02): Table 'todos.todo_items' doesn't exist
+mysql>
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> --network todo-app `
+>> -e MYSQL_HOST=mysql `
+>> -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret `
+>> -e MYSQL_DB=todos `
+>> node:12-alpine `
+>> sh-c "yarn install && yarn run dev"
+3642630e425f23dcdcecf420af6b33f1f228d43ee8f8e556a4c7eb2bacae7f7f
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS         PORTS                 NAMES
+e1bb46a292f1   mysql:5.7   "docker-entrypoint.s…"   41 minutes ago   Up 8 minutes   3306/tcp, 33060/tcp   nostalgic_chaum
+818bc0d49457   ubuntu      "bash -c 'shuf -i 1-…"   11 hours ago     Up 11 hours                          unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS        PORTS     NAMES
+818bc0d49457   ubuntu    "bash -c 'shuf -i 1-…"   11 hours ago   Up 11 hours             unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -d `                                    
+>> --network todo-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos `
+>> mysql:5.7
+Unable to find image 'mysql:5.7' locally
+5.7: Pulling from library/mysql
+72a69066d2fe: Pull complete
+93619dbc5b36: Pull complete
+e5c707858ec0: Pull complete
+fc41578cbf60: Pull complete
+4785d896ef10: Pull complete
+7d250cdc93be: Pull complete
+2efe6ef3579a: Pull complete
+40dc4a5ca43a: Pull complete
+cd6f90222f59: Pull complete
+031e631e9021: Pull complete
+Digest: sha256:66480693e01295d85954bb5dbe2f41f29ebceb57d3d8098ea0c9d201473f2d8b
+452954ad2d0f93dcf961b63bb48b9f2b454c9c2ab3117bc310b3dce2cdc9f337
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> --network todo-app `
+>> -e MYSQL_HOST=mysql `
+>> -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret `
+>> -e MYSQL_DB=todos `
+>> node:12-alpine `
+>> sh-c "yarn install && yarn run dev"
+Unable to find image 'node:12-alpine' locally
+12-alpine: Pulling from library/node
+59bf1c3509f3: Already exists
+56ea1bcfc516: Already exists
+55284a5c72ce: Already exists
+a9867c49b9eb: Already exists
+Digest: sha256:c3e7817c8fd124f1597cd66124d247db8e138e8ef311ba085b7104d900129d0b
+Status: Downloaded newer image for node:12-alpine
+1f07b5220da59e0d09c17e3948cc3b5a71ecc7fc1379625826bf8ae0dbbdeae6
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                 NAMES
+818bc0d49457   ubuntu      "bash -c 'shuf -i 1-…"   12 hours ago    Up 12 hours                          unruffled_lumiere
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker exec -it 452954ad2d0f  mysql -p todos        
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.37 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+Bye
+
+version: "3.7"
+
+services:
+   app:
+    image: node:12-alpine
+    command: sh -c "yarn install && yarn run dev"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: mysql 
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+   mysql:
+    image: mysql:5.7
+    volumes:
+     - todo-mysql-data:/var/lib/mysql
+    environment:
+     MYSQL_ROOT_PASSWORD: secret
+     MYSQL_DATABASES: todos 
+volumes: 
+  todo-mysql-data:
+
+
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker-compose version 
+Docker Compose version v2.2.3
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker-compose up -d
+[+] Building 18.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                     2.4s 
+ => => transferring dockerfile: 210B                                                                                                                     0.3s 
+ => [internal] load .dockerignore                                                                                                                        2.8s 
+ => => transferring context: 52B                                                                                                                         0.3s 
+ => resolve image config for docker.io/docker/dockerfile:1                                                                                               8.8s 
+ => [auth] docker/dockerfile:pull token for registry-1.docker.io                                                                                         0.0s 
+ => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:42399d4635eddd7a9b8a24be879d2f9a930d0ed040a61324cfdf59ef1357b3b2                          0.0s 
+ => [internal] load .dockerignore                                                                                                                        0.0s 
+ => [internal] load build definition from Dockerfile                                                                                                     0.0s 
+failed to solve: rpc error: code = Unknown desc = failed to solve with frontend dockerfile.v0: failed to solve with frontend gateway.v0: rpc error: code = Unknown desc = target stage dev could not be found
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker scan getting-started
+Docker Scan relies upon access to Snyk, a third party provider, do you consent to proceed using Snyk? (y/N)
+
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> docker image history getting-started
+Error response from daemon: No such image: getting-started:latest
+PS C:\Users\Mounika\Downloads\getting-started-master (1)\getting-started-master\app> 
