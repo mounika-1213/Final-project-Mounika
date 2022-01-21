@@ -1,0 +1,980 @@
+mounika@DESKTOP-S5UK35A:~$ pwd
+/home/mounika
+mounika@DESKTOP-S5UK35A:~$ ls
+abc  fsam.txt  get-pip.py  hasmum  myemptyfile  myfile  temp  tempy  zing
+mounika@DESKTOP-S5UK35A:~$ cd temp
+mounika@DESKTOP-S5UK35A:~/temp$ ls
+abdtutor  file2.txt  file3.txt  folder1
+mounika@DESKTOP-S5UK35A:~/temp$ cd /
+mounika@DESKTOP-S5UK35A:/$ pwd
+/
+mounika@DESKTOP-S5UK35A:/$ ls
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+mounika@DESKTOP-S5UK35A:/$ cd usr
+mounika@DESKTOP-S5UK35A:/usr$ ls
+bin  config  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+mounika@DESKTOP-S5UK35A:/usr$ cd /
+mounika@DESKTOP-S5UK35A:/$ cd sys
+mounika@DESKTOP-S5UK35A:/sys$ ls
+block  bus  class  dev  devices  firmware  fs  kernel  module  power
+mounika@DESKTOP-S5UK35A:/sys$ cd /
+mounika@DESKTOP-S5UK35A:/$ cd usr/local
+mounika@DESKTOP-S5UK35A:/usr/local$ ls
+bin  etc  games  include  lib  man  sbin  share  src
+mounika@DESKTOP-S5UK35A:/usr/local$ cd /
+mounika@DESKTOP-S5UK35A:/$ cd usr/games
+mounika@DESKTOP-S5UK35A:/usr/games$ cd
+mounika@DESKTOP-S5UK35A:~$ pwd
+/home/mounika
+mounika@DESKTOP-S5UK35A:~$ cd temp
+mounika@DESKTOP-S5UK35A:~/temp$ cd folder1
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ ls
+file.txt  infolder  mix.txt  mytext.txt  mytext1.txt
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ cat mix.txt
+hello
+welcome
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ cat mytext.txt
+hello
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ cp mytext.txt mix.txt
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ ls
+file.txt  infolder  mix.txt  mytext.txt  mytext1.txt
+mounika@DESKTOP-S5UK35A:~/temp/folder1$ cd
+mounika@DESKTOP-S5UK35A:~$ cd temp
+mounika@DESKTOP-S5UK35A:~/temp$ mv  file2.txt  mix.txt
+mounika@DESKTOP-S5UK35A:~/temp$ ls
+abdtutor  file3.txt  folder1  mix.txt
+mounika@DESKTOP-S5UK35A:~/temp$ whoami
+mounika
+mounika@DESKTOP-S5UK35A:~/temp$ who
+mounika@DESKTOP-S5UK35A:~/temp$ w
+ 14:22:04 up  2:02,  0 users,  load average: 0.52, 0.58, 0.59
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+mounika@DESKTOP-S5UK35A:~/temp$ id
+uid=1000(mounika) gid=1000(mounika) groups=1000(mounika),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),117(netdev)
+mounika@DESKTOP-S5UK35A:~/temp$ man man
+mounika@DESKTOP-S5UK35A:~/temp$ cd
+mounika@DESKTOP-S5UK35A:~$ sudo useradd munna
+[sudo] password for mounika:
+mounika@DESKTOP-S5UK35A:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+landscape:x:110:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+mounika:x:1000:1000:,,,:/home/mounika:/bin/bash
+priya:x:1001:1001::/home/priya:/bin/sh
+vimala:x:1002:1002::/home/vimala:/bin/sh
+munna:x:1003:1004::/home/munna:/bin/sh
+mounika@DESKTOP-S5UK35A:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,mounika
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:mounika
+fax:x:21:
+voice:x:22:
+cdrom:x:24:mounika
+floppy:x:25:mounika
+tape:x:26:
+sudo:x:27:mounika
+audio:x:29:mounika
+dip:x:30:mounika
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:mounika
+sasl:x:45:
+plugdev:x:46:mounika
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+admin:x:116:
+netdev:x:117:mounika
+lxd:x:118:
+mounika:x:1000:
+priya:x:1001:
+vimala:x:1002:
+training:x:1003:
+munna:x:1004:
+mounika@DESKTOP-S5UK35A:~$ groupadd
+Usage: groupadd [options] GROUP
+
+Options:
+  -f, --force                   exit successfully if the group already exists,
+                                and cancel -g if the GID is already used
+  -g, --gid GID                 use GID for the new group
+  -h, --help                    display this help message and exit
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -o, --non-unique              allow to create groups with duplicate
+                                (non-unique) GID
+  -p, --password PASSWORD       use this encrypted password for the new group
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       directory prefix
+      --extrausers              Use the extra users database
+
+mounika@DESKTOP-S5UK35A:~$ groupmod
+Usage: groupmod [options] GROUP
+
+Options:
+  -g, --gid GID                 change the group ID to GID
+  -h, --help                    display this help message and exit
+  -n, --new-name NEW_GROUP      change the name to NEW_GROUP
+  -o, --non-unique              allow to use a duplicate (non-unique) GID
+  -p, --password PASSWORD       change the password to this (encrypted)
+                                PASSWORD
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+
+mounika@DESKTOP-S5UK35A:~$ usermod
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+mounika@DESKTOP-S5UK35A:~$ ls -il
+total 2112
+  844424930451503 drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 abc
+ 2533274790725617 -rw-r--r-- 1 mounika mounika      10 Jan 20 11:13 fsam.txt
+ 1407374883663495 -rw-r--r-- 1 mounika mounika 2159352 Jan 20 13:52 get-pip.py
+  562949953740849 drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 hasmum
+ 1125899906996586 -rw-r--r-- 1 mounika mounika       0 Jan 20 11:11 myemptyfile
+ 1688849860387817 -rw-r--r-- 1 mounika mounika       0 Jan 20 12:43 myfile
+37717646879338694 drwxr-xr-x 1 mounika mounika    4096 Jan 20 14:21 temp
+  562949953740852 drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 tempy
+  562949953740854 drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 zing
+mounika@DESKTOP-S5UK35A:~$ file fsam.txt
+fsam.txt: ASCII text
+mounika@DESKTOP-S5UK35A:~$ ls -a
+.   .bash_history  .bashrc  .config     .local       .profile         .sudo_as_admin_successful  fsam.txt    hasmum       myfile  tempy
+..  .bash_logout   .cache   .landscape  .motd_shown  .python_history  abc                        get-pip.py  myemptyfile  temp    zing
+mounika@DESKTOP-S5UK35A:~$ ls -i
+  844424930451503 abc        1407374883663495 get-pip.py   1125899906996586 myemptyfile  37717646879338694 temp     562949953740854 zing
+ 2533274790725617 fsam.txt    562949953740849 hasmum       1688849860387817 myfile         562949953740852 tempy
+mounika@DESKTOP-S5UK35A:~$ ls -l
+total 2112
+drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 abc
+-rw-r--r-- 1 mounika mounika      10 Jan 20 11:13 fsam.txt
+-rw-r--r-- 1 mounika mounika 2159352 Jan 20 13:52 get-pip.py
+drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 hasmum
+-rw-r--r-- 1 mounika mounika       0 Jan 20 11:11 myemptyfile
+-rw-r--r-- 1 mounika mounika       0 Jan 20 12:43 myfile
+drwxr-xr-x 1 mounika mounika    4096 Jan 20 14:21 temp
+drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 tempy
+drwxr-xr-x 1 mounika mounika    4096 Jan 10 19:00 zing
+mounika@DESKTOP-S5UK35A:~$ ls -alh| grep temp
+drwxr-xr-x 1 mounika mounika 4.0K Jan 20 14:21 temp
+drwxr-xr-x 1 mounika mounika 4.0K Jan 10 19:00 tempy
+mounika@DESKTOP-S5UK35A:~$ touch onefile
+mounika@DESKTOP-S5UK35A:~$ ls- -alh onefile
+
+mounika@DESKTOP-S5UK35A:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        3569232     2994328      345552       17720      229352      441172
+Swap:      11010048      432828    10577220
+mounika@DESKTOP-S5UK35A:~$ uptime
+ 14:27:03 up  2:07,  0 users,  load average: 0.52, 0.58, 0.59
+mounika@DESKTOP-S5UK35A:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1509 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [893 kB]
+Fetched 2737 kB in 20s (138 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+mounika@DESKTOP-S5UK35A:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+mounika@DESKTOP-S5UK35A:~$ python3
+Python 3.8.10 (default, Nov 26 2021, 20:14:08)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> "hell0"
+'hell0'
+>>> 789+87
+876
+>>> 879*90
+79110
+>>> 657%89
+34
+>>> 809/67
+12.074626865671641
+>>> 897//87
+10
+>>> 890-90
+800
+
+>>>
+>>> no=879
+>>> if(no<10):
+...  print('single digit no'+str(no))
+... elif(no<1000):
+...  print('triple digit no'+str(no))
+... else:
+...  print('multi digit no'+str(no))
+...
+triple digit no879
+>>> name= input("what is your name")
+what is your name mouni
+>>> print(name)
+ mouni
+>>> a,b=0,1
+>>> n=14
+>>> while(a > n):
+...  print(a, end=' ')
+...  a,b = b, a+b
+...
+>>>
+>>> def hellofunction(n,m):
+...  if(n>m):
+...      print(str(n)+'is great')
+...  else:
+...      print(str(m)+'is great')
+...
+>>> hellofunction(12,576):
+576 is great. 
+>>> class student:
+...     def setstudent(self,id,name):
+...             self.id=id
+...             self.name=name
+...     def getstudent(self):
+...             print(self.id, " " , self.name)
+...
+>>> std = student()
+>>> std.setstudent(35,"mounika")
+>>> std.getstudent()
+35   mounika
+>>> exit()
+mounika@DESKTOP-S5UK35A:~$ top
+top - 14:44:41 up  2:25,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  4.5 us,  2.3 sy,  0.0 ni, 93.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   3485.6 total,    494.7 free,   2766.9 used,    224.0 buff/cache
+MiB Swap:  10752.0 total,  10327.8 free,    424.2 used.    588.1 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0    8944    212    168 S   0.0   0.0   0:00.14 init
+ 4446 root      20   0    8944    228    184 S   0.0   0.0   0:00.00 init
+ 4448 mounika   20   0   18080   3592   3496 S   0.0   0.1   0:00.32 bash
+ 4846 mounika   20   0   18948   2100   1456 R   0.0   0.1   0:00.01 top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mounika@DESKTOP-S5UK35A:~$ last
+
+wtmp begins Mon Jan 10 17:51:53 2022
+mounika@DESKTOP-S5UK35A:~$ ps
+  PID TTY          TIME CMD
+ 4448 tty3     00:00:00 bash
+ 4848 tty3     00:00:00 ps
+mounika@DESKTOP-S5UK35A:~$ info
+mounika@DESKTOP-S5UK35A:~$ env
+SHELL=/bin/bash
+WSL_DISTRO_NAME=Ubuntu-20.04
+NAME=DESKTOP-S5UK35A
+PWD=/home/mounika
+LOGNAME=mounika
+HOME=/home/mounika
+LANG=C.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=mounika
+SHLVL=1
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/mounika/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu20.04onWindows_2004.2021.825.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Mounika/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mounika/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+HOSTTYPE=x86_64
+_=/usr/bin/env
+OLDPWD=/home/mounika/temp
+mounika@DESKTOP-S5UK35A:~$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+rootfs         106702816 52405664  54297152  50% /
+none           106702816 52405664  54297152  50% /dev
+none           106702816 52405664  54297152  50% /run
+none           106702816 52405664  54297152  50% /run/lock
+none           106702816 52405664  54297152  50% /run/shm
+none           106702816 52405664  54297152  50% /run/user
+tmpfs          106702816 52405664  54297152  50% /sys/fs/cgroup
+C:\            106702816 52405664  54297152  50% /mnt/c
+D:\            380027900 29800484 350227416   8% /mnt/d
+
+mounika@DESKTOP-S5UK35A:~$ man -df
+ruid=1000, euid=1000
+rgid=1000, egid=1000
+++priv_drop_count = 1
+From the config file /etc/manpath.config:
+  Mandatory mandir `/usr/man'.
+  Mandatory mandir `/usr/share/man'.
+  Mandatory mandir `/usr/local/share/man'.
+  Path `/bin' mapped to mandir `/usr/share/man'.
+  Path `/usr/bin' mapped to mandir `/usr/share/man'.
+  Path `/sbin' mapped to mandir `/usr/share/man'.
+  Path `/usr/sbin' mapped to mandir `/usr/share/man'.
+  Path `/usr/local/bin' mapped to mandir `/usr/local/man'.
+  Path `/usr/local/bin' mapped to mandir `/usr/local/share/man'.
+  Path `/usr/local/sbin' mapped to mandir `/usr/local/man'.
+  Path `/usr/local/sbin' mapped to mandir `/usr/local/share/man'.
+  Path `/usr/X11R6/bin' mapped to mandir `/usr/X11R6/man'.
+  Path `/usr/bin/X11' mapped to mandir `/usr/X11R6/man'.
+  Path `/usr/games' mapped to mandir `/usr/share/man'.
+  Path `/opt/bin' mapped to mandir `/opt/man'.
+  Path `/opt/sbin' mapped to mandir `/opt/man'.
+  Global mandir `/usr/man', catdir `/var/cache/man/fsstnd'.
+  Global mandir `/usr/share/man', catdir `/var/cache/man'.
+  Global mandir `/usr/local/man', catdir `/var/cache/man/oldlocal'.
+  Global mandir `/usr/local/share/man', catdir `/var/cache/man/local'.
+  Global mandir `/usr/X11R6/man', catdir `/var/cache/man/X11R6'.
+  Global mandir `/opt/man', catdir `/var/cache/man/opt'.
+  Global mandir `/snap/man', catdir `/var/cache/man/snap'.
+  Added sections: `1', `n', `l', `8', `3', `2', `3posix', `3pm', `3perl', `3am', `5', `4', `9', `6', `7'.
+whatis what?
+mounika@DESKTOP-S5UK35A:~$ df -ah
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          102G   50G   52G  50% /
+none            102G   50G   52G  50% /dev
+sysfs              0     0     0    - /sys
+proc               0     0     0    - /proc
+devpts             0     0     0    - /dev/pts
+none            102G   50G   52G  50% /run
+none            102G   50G   52G  50% /run/lock
+none            102G   50G   52G  50% /run/shm
+none            102G   50G   52G  50% /run/user
+binfmt_misc        0     0     0    - /proc/sys/fs/binfmt_misc
+tmpfs           102G   50G   52G  50% /sys/fs/cgroup
+cgroup             0     0     0    - /sys/fs/cgroup/devices
+C:\             102G   50G   52G  50% /mnt/c
+D:\             363G   29G  335G   8% /mnt/d
+mounika@DESKTOP-S5UK35A:~$ sudo apt update
+[sudo] password for mounika:
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Fetched 108 kB in 6s (19.1 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+mounika@DESKTOP-S5UK35A:~$ sudo apt install software-properties-common
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+software-properties-common is already the newest version (0.99.9.8).
+software-properties-common set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+mounika@DESKTOP-S5UK35A:~$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:3 http://ppa.launchpad.net/ansible/ansible/ubuntu focal InRelease [18.0 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://ppa.launchpad.net/ansible/ansible/ubuntu focal/main amd64 Packages [1132 B]
+Get:7 http://ppa.launchpad.net/ansible/ansible/ubuntu focal/main Translation-en [756 B]
+Fetched 128 kB in 7s (18.5 kB/s)
+Reading package lists... Done
+mounika@DESKTOP-S5UK35A:~$ sudo apt install ansible
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ansible-core python3-bcrypt python3-jmespath python3-kerberos python3-ntlm-auth python3-packaging python3-paramiko python3-pyparsing python3-requests-kerberos
+  python3-requests-ntlm python3-resolvelib python3-winrm python3-xmltodict sshpass
+Suggested packages:
+  python3-gssapi python-pyparsing-doc
+The following NEW packages will be installed:
+  ansible ansible-core python3-bcrypt python3-jmespath python3-kerberos python3-ntlm-auth python3-packaging python3-paramiko python3-pyparsing
+  python3-requests-kerberos python3-requests-ntlm python3-resolvelib python3-winrm python3-xmltodict sshpass
+0 upgraded, 15 newly installed, 0 to remove and 0 not upgraded.
+Need to get 22.8 MB of archives.
+After this operation, 300 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pyparsing all 2.4.6-1 [61.3 kB]
+Get:2 http://ppa.launchpad.net/ansible/ansible/ubuntu focal/main amd64 python3-resolvelib all 0.5.4-2ppa~focal [12.6 kB]
+Get:3 http://ppa.launchpad.net/ansible/ansible/ubuntu focal/main amd64 ansible-core all 2.12.1-1ppa~focal [941 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-packaging all 20.3-1 [26.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-jmespath all 0.9.4-2ubuntu1 [21.5 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-kerberos amd64 1.1.14-3.1build1 [22.6 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-ntlm-auth all 1.1.0-1 [19.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-bcrypt amd64 3.1.7-2ubuntu1 [30.4 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-paramiko all 2.6.0-2 [122 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-requests-kerberos all 0.12.0-2 [11.9 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-requests-ntlm all 1.1.0-1 [6004 B]
+Get:12 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-xmltodict all 0.12.0-1 [12.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal/universe amd64 python3-winrm all 0.3.0-2 [21.7 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal/universe amd64 sshpass amd64 1.06-1 [10.5 kB]
+Selecting previously unselected package python3-pyparsing.al/main amd64 ansible all 5.2.0-1ppa~focal [21.5 MB]
+(Reading database ... 32282 files and directories currently installed.)
+Unpacking python3-pyparsing (2.4.6-1) ..............................................................................................................................]
+Unpacking python3-packaging (20.3-1) ...............................................................................................................................]
+Selecting previously unselected package ansible-core................................................................................................................]
+Preparing to unpack .../03-ansible-core_2.12.1-1ppa~focal_all.deb ...b ...
+Unpacking ansible-core (2.12.1-1ppa~focal) .........................................................................................................................]
+Selecting previously unselected package ansible.....................................................................................................................]
+Preparing to unpack .../04-ansible_5.2.0-1ppa~focal_all.deb ...
+Unpacking ansible (5.2.0-1ppa~focal) ...............................................................................................................................]
+
+exit()
+Selecting previously unselected package python3-jmespath.
+Preparing to unpack .../05-python3-jmespath_0.9.4-2ubuntu1_all.deb ...
+Unpacking python3-jmespath (0.9.4-2ubuntu1) ...
+Selecting previously unselected package python3-kerberos.
+Preparing to unpack .../06-python3-kerberos_1.1.14-3.1build1_amd64.deb ...
+Unpacking python3-kerberos (1.1.14-3.1build1) ...
+Selecting previously unselected package python3-ntlm-auth.
+Preparing to unpack .../07-python3-ntlm-auth_1.1.0-1_all.deb ...
+Unpacking python3-ntlm-auth (1.1.0-1) ...
+Selecting previously unselected package python3-bcrypt.
+Preparing to unpack .../08-python3-bcrypt_3.1.7-2ubuntu1_amd64.deb ...
+Unpacking python3-bcrypt (3.1.7-2ubuntu1) ...
+Selecting previously unselected package python3-paramiko.
+Preparing to unpack .../09-python3-paramiko_2.6.0-2_all.deb ...
+Unpacking python3-paramiko (2.6.0-2) ...
+Selecting previously unselected package python3-requests-kerberos.
+Preparing to unpack .../10-python3-requests-kerberos_0.12.0-2_all.deb ...
+Unpacking python3-requests-kerberos (0.12.0-2) ...
+Selecting previously unselected package python3-requests-ntlm.
+Preparing to unpack .../11-python3-requests-ntlm_1.1.0-1_all.deb ...
+Unpacking python3-requests-ntlm (1.1.0-1) ...
+Selecting previously unselected package python3-xmltodict.
+Preparing to unpack .../12-python3-xmltodict_0.12.0-1_all.deb ...
+Unpacking python3-xmltodict (0.12.0-1) ...
+Selecting previously unselected package python3-winrm.
+Preparing to unpack .../13-python3-winrm_0.3.0-2_all.deb ...
+Unpacking python3-winrm (0.3.0-2) ...
+Selecting previously unselected package sshpass.
+Preparing to unpack .../14-sshpass_1.06-1_amd64.deb ...
+Unpacking sshpass (1.06-1) ...
+W: APT had planned for dpkg to do more than it reported back (30 vs 61).
+   Affected packages: ansible-core:amd64 ansible:amd64 python3-bcrypt:amd64 python3-jmespath:amd64 python3-kerberos:amd64 python3-ntlm-auth:amd64 python3-packaging:amd64 python3-paramiko:amd64 python3-pyparsing:amd64 python3-requests-kerberos:amd64 python3-requests-ntlm:amd64 python3-resolvelib:amd64 python3-winrm:amd64 python3-xmltodict:amd64 sshpass:amd64
+
+
+mounika@DESKTOP-S5UK35A:~$
+mounika@DESKTOP-S5UK35A:~$ nano input.sh
+mounika@DESKTOP-S5UK35A:~$ cat input.sh
+#!/bin/bash
+Name = Mounika
+Role = Engineer
+Salary = 26000
+echo($Mounika, $Engineer, $26000)
+
+mounika@DESKTOP-S5UK35A:~$ nano loop.sh
+mounika@DESKTOP-S5UK35A:~$ chmod 774 loop.sh
+mounika@DESKTOP-S5UK35A:~$ ./loop.sh
+Southern indian state Andhra pradesh
+Southern indian state Tamilnadu
+Southern indian state Telangana
+Southern indian state Kerala
+
+mounika@DESKTOP-S5UK35A:~$ nano if else.sh
+mounika@DESKTOP-S5UK35A:~$ nano ifelse.sh
+mounika@DESKTOP-S5UK35A:~$ chmod 774 ifelse.sh
+mounika@DESKTOP-S5UK35A:~$ ./ifelse.sh
+enter a animal
+cat
+./ifelse.sh: line 4: [cat: command not found
+i like cat
+mounika@DESKTOP-S5UK35A:~$ ./ifelse.sh
+enter a animal
+dog
+./ifelse.sh: line 4: [dog: command not found
+i like dog
+
+mounika@DESKTOP-S5UK35A:~$ nano func.sh
+mounika@DESKTOP-S5UK35A:~$ chmod 774 func.sh
+mounika@DESKTOP-S5UK35A:~$ ./func.sh
+function with arguments demo
+hi,
+hello,
+
+mounika@DESKTOP-S5UK35A:~$ ansible -h
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD] [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+               [-c CONNECTION] [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS] [--scp-extra-args SCP_EXTRA_ARGS]
+               [--ssh-extra-args SSH_EXTRA_ARGS] [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [--syntax-check] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS] [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+               [--task-timeout TASK_TIMEOUT] [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook directory.This sets the relative path for many features including
+                        roles/ group_vars/ etc.
+  --syntax-check        perform a syntax check on the playbook, but do not execute it
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default=~/.ansible/plugins/modules:/usr/share/ansible/plugins/modules)
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1 opt2=val2'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable connection debugging)
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=None)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+mounika@DESKTOP-S5UK35A:~$ ansible --version
+ansible [core 2.12.1]
+  config file = None
+  configured module search path = ['/home/mounika/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/mounika/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Nov 26 2021, 20:14:08) [GCC 9.3.0]
+  jinja version = 2.10.1
+  libyaml = True
+
+mounika@DESKTOP-S5UK35A:~$ nano student.yml
+mounika@DESKTOP-S5UK35A:~$ cat student.yml
+--- #optional YAML start syntax
+james:
+   name: jhon
+   roll no:23
+   div: c
+--- #optional YAML end syntax
+
+mounika@DESKTOP-S5UK35A:~$ nano city.yml
+mounika@DESKTOP-S5UK35A:~$ cat city.yml
+---
+countries:
+   - America
+   - china
+   - canada
+---
+mounika@DESKTOP-S5UK35A:~$ ansible-galaxy -h
+usage: ansible-galaxy [-h] [--version] [-v] TYPE ...
+
+Perform various Role and Collection related operations.
+
+positional arguments:
+  TYPE
+    collection   Manage an Ansible Galaxy collection.
+    role         Manage an Ansible Galaxy role.
+
+optional arguments:
+  --version      show program's version number, config file location, configured module search path, module location, executable location and exit
+  -h, --help     show this help message and exit
+  -v, --verbose  verbose mode (-vvv for more, -vvvv to enable connection debugging)
+mounika@DESKTOP-S5UK35A:~$ ansible galaxy init --force --offline mounikarole
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD] [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+               [-c CONNECTION] [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS] [--scp-extra-args SCP_EXTRA_ARGS]
+               [--ssh-extra-args SSH_EXTRA_ARGS] [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [--syntax-check] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS] [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+               [--task-timeout TASK_TIMEOUT] [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: unrecognized arguments: init --force --offline mounikarole
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD] [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+               [-c CONNECTION] [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS] [--scp-extra-args SCP_EXTRA_ARGS]
+               [--ssh-extra-args SSH_EXTRA_ARGS] [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [--syntax-check] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS] [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+               [--task-timeout TASK_TIMEOUT] [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook directory.This sets the relative path for many features including
+                        roles/ group_vars/ etc.
+  --syntax-check        perform a syntax check on the playbook, but do not execute it
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default=~/.ansible/plugins/modules:/usr/share/ansible/plugins/modules)
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1 opt2=val2'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable connection debugging)
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=None)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+mounika@DESKTOP-S5UK35A:~$ tree mounikarole/
+
+Command 'tree' not found, but can be installed with:
+
+sudo apt install tree
+
+mounika@DESKTOP-S5UK35A:~$ sudo apt install tree
+[sudo] password for mounika:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+15 not fully installed or removed.
+Need to get 43.0 kB of archives.
+After this operation, 115 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 tree amd64 1.8.0-1 [43.0 kB]
+Selecting previously unselected package tree.
+(Reading database ... 76982 files and directories currently installed.)
+Unpacking tree (1.8.0-1) ...........................................................................................................................................]
+Setting up python3-ntlm-auth (1.1.0-1) .............................................................................................................................]
+Setting up python3-bcrypt (3.1.7-2ubuntu1) .........................................................................................................................]
+Setting up python3-resolvelib (0.5.4-2ppa~focal) ...................................................................................................................]
+Setting up python3-kerberos (1.1.14-3.1build1) ...#.................................................................................................................]
+Setting up sshpass (1.06-1) ...############################.........................................................................................................]
+Setting up python3-xmltodict (0.12.0-1) ...#########################................................................................................................]
+Setting up python3-pyparsing (2.4.6-1) ...##################################........................................................................................]
+Setting up python3-jmespath (0.9.4-2ubuntu1) ...####################################................................................................................]
+Setting up tree (1.8.0-1) ...################################################################.......................................................................]
+Setting up python3-requests-kerberos (0.12.0-2) ...##################################################...............................................................]
+Setting up python3-paramiko (2.6.0-2) ...####################################################################.......................................................]
+Setting up python3-requests-ntlm (1.1.0-1) ...########################################################################..............................................]
+Setting up python3-packaging (20.3-1) ...#####################################################################################......................................]
+Setting up python3-winrm (0.3.0-2) ...################################################################################################..............................]
+Setting up ansible-core (2.12.1-1ppa~focal) ...################################################################################################.....................]
+Setting up ansible (5.2.0-1ppa~focal) ...##############################################################################################################.............]
+Processing triggers for man-db (2.9.1-1) ...###################################################################################################################.....]
+mounika@DESKTOP-S5UK35A:~$
+mounika@LAPTOP-0KFB3QDJ:~$ nano sample.yml
+mounika@LAPTOP-0KFB3QDJ:~$ cat sample.yml
+---
+student:
+     name: jhon
+     roll no: 25
+     section:  B
+     location: hyderabad
+...   
+mounika@LAPTOP-0KFB3QDJ:~$ nano main.yml
+mounika@LAPTOP-0KFB3QDJ:~$ cat main.yml
+---
+#install mounika arifacts
+-
+  block:
+     - name: install tomcat artifacts
+       action: >
+          yum name = "demo-tomcat-1" state = present
+         register: output
+
+  always:
+    - debug:
+        msg:
+         -"install tomcat artifacts task ended with message:{{output}}
+         -"install tomcat artifacts - {{output}}
+
+mounika@LAPTOP-0KFB3QDJ:~$ nano sample3.yml
+mounika@LAPTOP-0KFB3QDJ:~$ cat sample3.yml
+---
+    Details:
+          name: jhon
+          location: hyderabad
+          id: 34667
+...
+mounika@LAPTOP-0KFB3QDJ:~$ nano main1.yml
+mounika@LAPTOP-0KFB3QDJ:~$ cat main1.yml
+#start tomcat
+-
+    block:
+      - name: start tomcat
+      command: <path of tomcat>/bin/startup.sh"
+      register: output
+      become: true
+
+     always:
+       - debug:
+          msg:
+          - "start tomcat task ended with message: {{output}}"
+          - "tomcat started - {{output.changed}}"
+mounika@LAPTOP-0KFB3QDJ:~$ nano mounika_details.yml
+mounika@LAPTOP-0KFB3QDJ:~$ cat mounika_details.yml
+---
+- hosts:  tomcat-node
+roles:
+    - {role:  install-tomcat}
+    - {role:  start-tomcat}
+...
+
+mounika@LAPTOP-0KFB3QDJ:~$ ansible-galaxy init --force --offline mounikarole
+- Role mounikarole was created successfully
+mounika@LAPTOP-0KFB3QDJ:~$ tree mounikarole/
+mounikarole/
+├── README.md
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 8 files
+mounika@LAPTOP-0KFB3QDJ:~$ cd mounikarole
+mounika@LAPTOP-0KFB3QDJ:~/mounikarole$ ls
+README.md  defaults  files  handlers  meta  tasks  templates  tests  vars
+mounika@LAPTOP-0KFB3QDJ:~/mounikarole$ cd
+mounika@LAPTOP-0KFB3QDJ:~$ cd mounika_playbook
+mounika@LAPTOP-0KFB3QDJ:~/mounika_playbook$ ls
+install-tomcat  nani.yaml  nani.yml  sri_orchestrate.yml  start-tomcat
+mounika@LAPTOP-0KFB3QDJ:~/mounika_playbook$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
